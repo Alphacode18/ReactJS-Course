@@ -35,3 +35,16 @@ Component Based UI
 - Each element is its own component.
 - Very organized and dynamic.
 - Props (properties), States, Logic and much more!
+
+Create React App
+----------------
+
+- Create-React-App is like a package full of scripts that setup your folder structures for React Development.
+- React is a SPA (Single Page Application) which has its main view in index.html
+- The div with the id of root, is where our main app will live and output on a browser.
+- Anything we create will be children of this root! (Evidence can be found in index.js where app.js {our main application} is rendered
+  in the root element via DOM manipulation using Vanilla JS)
+* Development : While deploying, we don't deploy src or anything. We deploy what we get from npm run build, which makes file look very different.
+- Generally we used to have class based components, which have now been replaced by function based components. 
+- A class component could have state while a function component could not. But with Hooks, that has changed!
+
