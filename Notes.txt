@@ -48,3 +48,11 @@ Create React App
 - Generally we used to have class based components, which have now been replaced by function based components. 
 - A class component could have state while a function component could not. But with Hooks, that has changed!
 
+JSX
+---
+
+- JSX is JavaScript Extension, which helps us write JS Extension for HTML Code.
+- Always requires a parent element (div)
+- If you do not want a parent element like div, but still it is required to have a parent element. 
+  So we use React.Fragment. We can also use <> </> for the same ghost element (Not good practice)!
+- We can use ternary operators for conditionals. We can also use && where it executes second statement if first is true.
