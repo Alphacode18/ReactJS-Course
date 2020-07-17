@@ -1,0 +1,34 @@
+React
+-----
+
+What is React?
+--------------
+
+- React is a client side JavaScript library.
+- Used to build dynamic user interfaces.
+- Components based (An app made up of multiple smaller apps (not really)).
+- Industry Standard Framework.
+
+
+Is React a library or a framework?
+----------------------------------
+
+- React is technically a library. It's more bare bones but we can easy install things that we need.
+- And as it is a direct competitor to Vue, Angular, and etc, it is refered to as a framework.
+
+Why Use React?
+--------------
+
+- Powerful UI/Front-End : Can be used to route (which is done generally by server).
+- Easy to organize code.
+- Because each app is made of components, it can be reused across applications.
+- Very light and fast.
+- Makes things much easier with a virtual DOM that can be used to update some parts without refreshing the entire page.
+- INDUSTRY STANDARD.
+
+Component Based UI
+------------------
+
+- Each element is its own component.
+- Very organized and dynamic.
+- Props (properties), States, Logic and much more!
