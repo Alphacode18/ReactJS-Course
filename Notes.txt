@@ -83,4 +83,14 @@ Lists and State as Props
 - Have an array in the current state.
 - Use Higher order functions like map(), filter() etc!
 - Good practice for each child (list element) to have a unique key prop like id, etc!
-- 
+- States can be passed through as props.
+
+Stateless Function Components
+-----------------------------
+
+- Class based components without state can be converted to function based components.
+- Props are now passed in as parameters.
+- In cases where you have defaultProps and propTypes, just use the name of the componet,
+  and put .defaultProps, and .propTypes
+- Heavily use destructuring. To destructure in parametes use ({users}) and if you want to 
+  destructure further, use ({users: {login, avatar_url, html_url}})
