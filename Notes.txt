@@ -74,3 +74,13 @@ Component State
 ---------------
 
 - State is a data set about the component that may change over its lifetime
+- In the class, we can define a state = {} object and pass in key-value pairs which
+  will be afterwards used in the UI code.
+
+Lists and State as Props
+------------------------
+
+- Have an array in the current state.
+- Use Higher order functions like map(), filter() etc!
+- Good practice for each child (list element) to have a unique key prop like id, etc!
+- 
