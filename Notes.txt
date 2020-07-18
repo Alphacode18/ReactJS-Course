@@ -56,3 +56,17 @@ JSX
 - If you do not want a parent element like div, but still it is required to have a parent element. 
   So we use React.Fragment. We can also use <> </> for the same ghost element (Not good practice)!
 - We can use ternary operators for conditionals. We can also use && where it executes second statement if first is true.
+
+Components, Props and Proptypes
+-------------------------------
+
+- Simply create a components folder and create your components inside.
+- Export your components, import them in app.js
+- Components can be used by <component />
+- In app.js, you can pass in properties <component title="component"/> and this property
+  can be utilized in the component by this.props.title. Just like EJS!
+- We can also create a static defaultProps object with the required keys!
+- PropTypes are used in checking. In static propTypes = {} define the type conditions for all props.
+- Example {title: PropTypes.string.isRequired}. This helps ensure type
+- Does not break the application but initiates console warnings.
+- 
