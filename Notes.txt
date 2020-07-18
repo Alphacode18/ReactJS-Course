@@ -69,4 +69,8 @@ Components, Props and Proptypes
 - PropTypes are used in checking. In static propTypes = {} define the type conditions for all props.
 - Example {title: PropTypes.string.isRequired}. This helps ensure type
 - Does not break the application but initiates console warnings.
-- 
+
+Component State
+---------------
+
+- State is a data set about the component that may change over its lifetime
