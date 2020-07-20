@@ -94,3 +94,11 @@ Stateless Function Components
   and put .defaultProps, and .propTypes
 - Heavily use destructuring. To destructure in parametes use ({users}) and if you want to 
   destructure further, use ({users: {login, avatar_url, html_url}})
+
+HTTP Request and Updating State
+-------------------------------
+
+- App level states must be in App.js when used without hooks or redux.
+- componentDidMount() is a lifecycle method used for HTTP request when components mount success
+  fully.
+- We do not change state directly by this.state.laoding = true; Rather we use this.setState({});
