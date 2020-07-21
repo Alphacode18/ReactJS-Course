@@ -108,4 +108,5 @@ Events and Search Component
 
 - Essential to have a component scope state for forms.
 - With that state it is essential to have onChange(event). event has access to all events and their subsequent properties.
-- 
+- [event.taget.name] can be used to generalize state change across input forms!
+- For access to global this keyword, use arrow functions!
