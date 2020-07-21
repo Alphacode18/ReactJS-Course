@@ -102,3 +102,10 @@ HTTP Request and Updating State
 - componentDidMount() is a lifecycle method used for HTTP request when components mount success
   fully.
 - We do not change state directly by this.state.laoding = true; Rather we use this.setState({});
+
+Events and Search Component
+---------------------------
+
+- Essential to have a component scope state for forms.
+- With that state it is essential to have onChange(event). event has access to all events and their subsequent properties.
+- 
