@@ -2,36 +2,50 @@ import React, { Component } from 'react';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
 import Search from './components/users/Search';
+import Alert from './components/layout/Alert';
 import axios from 'axios';
 import './App.css';
 
 class App extends Component {
-
   state = {
     users: [],
-    loading: false
-  }
+    loading: false,
+    alert: null,
+  };
 
-  searchUsers = async text => {
+  setAlert = (message, type) => {
+    this.setState({ alert: { message: message, type: type } });
+    setTimeout(() => {
+      this.setState({ alert: null });
+    }, 5000);
+  };
+
+  searchUsers = async (text) => {
     this.setState({ loading: true });
     const response = await axios.get(`https://api.github.com/search/users?q=${text}&client_id=
     ${process.env.REACT_APP_GITHUB_CLIENT}&client_secret=
     ${process.env.REACT_APP_GITHUB_CLIENTSECRET}`);
-    this.setState( {users: response.data.items, loading: false});
-  }
+    this.setState({ users: response.data.items, loading: false });
+  };
 
   clearUsers = () => {
     this.setState({ users: [], loading: false });
-  }
+  };
 
   render() {
     const { users, loading } = this.state;
     return (
-      <div className="app">
+      <div className='app'>
         <Navbar />
-        <div className="container">
-          <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={ users.length > 0 ? true : false }/>
-          <Users loading={loading} users={users}/>
+        <div className='container'>
+          <Alert alert={this.state.alert} />
+          <Search
+            searchUsers={this.searchUsers}
+            clearUsers={this.clearUsers}
+            showClear={users.length > 0 ? true : false}
+            setAlert={this.setAlert}
+          />
+          <Users loading={loading} users={users} />
         </div>
       </div>
     );
