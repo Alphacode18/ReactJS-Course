@@ -122,3 +122,8 @@ Clearing
 --------
 
 - It is generally easy to clear the screen by removing the data from the state!
+
+Routing
+-------
+
+- It is generally not a good practice to use <a> tags in React because they mess up the state! Use <Link>
