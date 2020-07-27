@@ -127,3 +127,12 @@ Routing
 -------
 
 - It is generally not a good practice to use <a> tags in React because they mess up the state! Use <Link>
+
+Hooks
+-----
+
+- Hooks are functions that let us hook into react state and life cycle functions from a functional component.
+
+useState : For Getting State
+useEffect: Life cycle functions
+useContext, useReducer, useRefs
