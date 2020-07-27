@@ -134,5 +134,5 @@ Hooks
 - Hooks are functions that let us hook into react state and life cycle functions from a functional component.
 
 useState : For Getting State
-useEffect: Life cycle functions
+useEffect: Life cycle functions //Add [] for componentDidMount()
 useContext, useReducer, useRefs
