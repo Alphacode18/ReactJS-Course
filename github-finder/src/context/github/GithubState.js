@@ -29,6 +29,33 @@ const GithubState = (props) => {
     });
   };
 
+  const clearUsers = () =>
+    dispatch({
+      type: CLEAR_USERS,
+    });
+
+  const getUser = async (username) => {
+    setLoading();
+    const response = await axios.get(`https://api.github.com/users/${username}?&client_id=
+      ${process.env.REACT_APP_GITHUB_CLIENT}&client_secret=
+      ${process.env.REACT_APP_GITHUB_CLIENTSECRET}`);
+    dispatch({
+      type: GET_USER,
+      payload: response.data,
+    });
+  };
+
+  const getUsersRepos = async (username) => {
+    setLoading();
+    const response = await axios.get(`https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=
+    ${process.env.REACT_APP_GITHUB_CLIENT}&client_secret=
+    ${process.env.REACT_APP_GITHUB_CLIENTSECRET}`);
+    dispatch({
+      type: GET_REPOS,
+      payload: response.data,
+    });
+  };
+
   const setLoading = () => dispatch({ type: SET_LOADING });
 
   return (
@@ -39,6 +66,9 @@ const GithubState = (props) => {
         repos: state.repos,
         loading: state.loading,
         searchUsers,
+        clearUsers,
+        getUser,
+        getUsersRepos,
       }}
     >
       {props.children}
